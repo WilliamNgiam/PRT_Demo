@@ -525,7 +525,7 @@ var final_screen = {
 
     var total_earned = CONFIG.TOTAL_REWARD; //jsPsych.data.get().filter({task: 'reward-feedback'}).count() * CONFIG.REWARD_AMOUNT / 100;
 
-    var output_html = `<p>You have completed the task!</p>`
+    var output_html = `<p>You have completed the demo!</p>`
 
     if (CONFIG.SHOW_ACCURACY_AT_END) {
 
@@ -534,8 +534,7 @@ var final_screen = {
     if (CONFIG.REWARD_AMOUNT != null && CONFIG.REWARD_AMOUNT != 0) {
       output_html += `<p>You earned $${total_earned.toFixed(2)}!</p>`
     }
-    output_html += `<p>Please return to the REDCap tab to finish the surveys.
-           If you have any issues returning to REDCap, email Kaylee at <a style="color: DodgerBlue" href="mailto:knull@mclean.harvard.edu">knull@mclean.harvard.edu</a> and provide your worker ID.</p>`
+    output_html += `<p></p>`
     return output_html;
   },
   on_load: function () {
@@ -550,7 +549,7 @@ var final_screen = {
 /* initialization */
 var timeline = [];
 
-timeline.push(id_entry);
+%timeline.push(id_entry);
 timeline.push(instructions_intro);
 timeline.push(practice_procedure);
 timeline.push(instructions_feedback);
